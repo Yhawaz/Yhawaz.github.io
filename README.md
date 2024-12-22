@@ -48,7 +48,7 @@ I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. T
 
 <img src="photos/konata.png" width="800" height="300"> <br>
 <img src="photos/state_machine.png" width="800" height="300"> <br>
-In this class assignments were completed in BlueSpec a System-Verilog spinoff, for our final-project we were tasked with picking from one of the various optimizations we covered in class and applying it to a pipelined-proccessor we had previously written as an assignment. My group decided to implement a SuperScalar Proccessor with a branch-target buffer, and apply it to a physical FPGA. We ended up being the only functioning SuperScalar proccessor that semester. A diagram explaining our proccessor and our konata logs demonstrating it actually performs two instruction per cycle are photographed above.
+In this class assignments were completed in BlueSpec a System-Verilog spinoff, for our final-project we were tasked with picking from one of the various optimizations we covered in class and applying it to a pipelined-proccessor we had previously written as an assignment. My group decided to implement a SuperScalar Proccessor with a branch-target buffer, and synth it on a Xiling FPGA. We ended up being the only functioning SuperScalar proccessor that semester. A diagram explaining our proccessor and our konata logs demonstrating it actually performs two instruction per cycle are photographed above.
 
  - dates: April 2024-May 2024
  - collaborators: Armando Moncada and Orion li
