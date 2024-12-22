@@ -1,7 +1,5 @@
-# Yeabsira Hawaz Portfolio
-## Hi
-### [yhawaz AT mit DOT edu] [github]
-### Hello I'm a Third year Undergraduate Student studying Electrical Engineering and Computer Science. I'm interested in the working across the hardware-software stack, digital system design, and all things low level.
+## [yhawaz AT mit DOT edu] [github]
+## Hello I'm a Third year Undergraduate Student studying Electrical Engineering and Computer Science. I'm interested in the working across the hardware-software stack, digital system design, and all things low level.
 ### I'm currently working on developing network on chip for hardware accelerator targetting sparse linear algebra under Prof. Daniel Sanchez. I'm also working on wrapping up my FPGA 3D Renderer   
 <!-- #### h4 Heading
 ##### h5 Heading
