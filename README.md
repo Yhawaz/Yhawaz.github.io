@@ -12,7 +12,7 @@
  I'm currently working on developing network on chip for a hardware accelerator targeting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in Ableton.
 #### [My Projects](#projects)
 <!-- #### [Past Experiences](#my-past-experiences) -->
-#### [My![alt text](image.png) Courswork](#relevant-coursework)
+#### [My Courswork](#relevant-coursework)
 
 ## Projects
 ### HoloForge: a camera-controlled 3D model viewer on FPGA
