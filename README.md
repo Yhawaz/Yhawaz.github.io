@@ -1,5 +1,5 @@
 # Yeabsira Hawaz's Portfolio
-<img src="photos/face.png" width="500" height="600">
+<img src="photos/face.png" width="400" height="400">
 
 
 
