@@ -46,7 +46,7 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
  <!-- - report: [pdf](fpga_360_report.pdf) -->
 
 ### CacheMeOutside: A SuperScalar Proccessor
-*Final Project for 6.1920(6.175) Constructive Computer Archtectiure 
+*Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
 
 I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
 
