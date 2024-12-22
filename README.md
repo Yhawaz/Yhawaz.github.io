@@ -47,9 +47,9 @@ So far it has working interrupts, VGA drivers, and keyboard drivers all written 
 ### Bass Guitar Pedals
 *Hobby Proj*
 
-<img src="photos/kicad.png" width="300" height="300"> <br>
-I breadboarded a circuit for a Fuzz pedal then designed a pcb for it in kicad. I'm using a 2 Caps in parllel with one being hooked into a potnetiometer to adjust the one(or the agressivness of the fuzz), which is caused by running
-I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. The main motivation behind this project was to get some exposure to circuits before I took the class, and learn kicad. Also, bass guitar pedals are really expensive, and transistors and resistors are really cheap. 
+<img src="photos/kicad.png" width="300" height="300"> 
+<img src="photos/bass_kicad.png" width="300" height="300"> <br>
+I breadboarded a circuit for a Fuzz pedal then designed a pcb for it in kicad. I'm using a 2 Caps in parllel with one being hooked into a potnetiometer to adjust the one(or the agressivness of the fuzz), which is caused by running the audio signal into a BJT, where the bass signal goes to Base(get it), and a Diode between the the bass signal and Collector to get that clipping effect.The main motivation behind this project was to get some exposure to circuits before I took the class, and learn kicad. Also, bass guitar pedals are really expensive, and transistors and resistors are really cheap. Hopefully I print the PCB over winter break, I also hope this project turns into "bass pedals" and I start amassing a little collection.
 
 ### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
