@@ -37,7 +37,7 @@ I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in 
  - dates: June 2024-Present
  - code: [github.com/yhawaz/snorOs](https://github.com/yhawaz/snorOs)
 
-## Bass Guitar Pedals
+### Bass Guitar Pedals
 **Hobby Proj*
 
 <img src="photos/bass_kicad.png" width="300" height="300"> <br>
