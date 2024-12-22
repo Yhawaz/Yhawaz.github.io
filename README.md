@@ -19,7 +19,7 @@
 ### HoloForge: a camera-controlled 3D model viewer on FPGA
 *Final Project for 6.205(6.111): Digital Systems Laboratory*
 
-<img src="photos/cube.png" width="300" height="300">
+<img src="photos/cube.png" width="300" height="300"> <br>
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
@@ -40,14 +40,14 @@ I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in 
 ## Bass Guitar Pedals
 **Hobby Proj*
 
-<img src="photos/bass_kicad.png" width="300" height="300">
+<img src="photos/bass_kicad.png" width="300" height="300"> <br>
 I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. The main motivation behind this project was to get some exposure to circuits before I took the class, and learn kicad. Also, bass guitar pedals are really expensive, and transistors and resistors are really cheap. 
 
 ### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
 
-<img src="photos/konata.png" width="800" height="500"> <br>
-<img src="photos/state_machine.png" width="800" height="500"> <br>
+<img src="photos/konata.png" width="800" height="300"> <br>
+<img src="photos/state_machine.png" width="800" height="300"> <br>
 In this class assignments were completed in BlueSpec a System-Verilog spinoff, for our final-project we were tasked with picking from one of the various optimizations we covered in class and applying it to a pipelined-proccessor we had previously written as an assignment. My group decided to implement a SuperScalar Proccessor with a branch-target buffer, and apply it to a physical FPGA. We ended up being the only functioning SuperScalar proccessor that semester. A diagram explaining our proccessor and our konata logs demonstrating it actually performs two instruction per cycle are photographed above.
 
  - dates: April 2024-May 2024
@@ -60,7 +60,7 @@ In this class assignments were completed in BlueSpec a System-Verilog spinoff, f
 
 
 ### Autonomous Robo Car
-*Project for 16.632 Intro to Autonomous Machines*
+*Project for 16.632 Intro to Autonomous Machines* <br>
 <img src="photos/robo.png" width="300" height="300"><br>
 In this class, we worked on assignments involving an Arduino-based car that used IR sensors, photoresistors, and force sensors. To achieve accurate line-following, I implemented discrete-time digital PID control systems and refined the underlying math to ensure precise performance.
 
