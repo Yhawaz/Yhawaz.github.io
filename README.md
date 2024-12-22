@@ -59,25 +59,25 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
 
 ## Relevant Coursework
 ### Fall 2024
-Digital Systems Labroatory 
-Linear Algebra
-Circuits
-### Spring 2024
-Constructive Computer Archtectiure
-Algorithims and Data Structures 
+Digital Systems Labroatory <br>  
+Linear Algebra <br> 
+Circuits <br> 
+### Spring 2024 <br> 
+Constructive Computer Archtectiure <br> 
+Algorithims and Data Structures  <br> 
 ### Fall 2023
-Computer Archtectiure
-Discrete Mathematics
-Intro to Music Tech
-Geospatial Software
+Computer Archtectiure <br> 
+Discrete Mathematics <br> 
+Intro to Music Tech <br> 
+Geospatial Software <br> 
 ### Spring 2023
-Fundamentals of Programming (taught in python) 
-Physics 2: Electricity and Mangnetism
+Fundamentals of Programming (taught in python) <br>  
+Physics 2: Electricity and Mangnetism <br> 
 ### Fall 2022
-Intro to Programming via C and Assembly
-Intro to Programming via Python
-Physics 1: Classical Mechanics
-Multivariable Calculus 
+Intro to Programming via C and Assembly <br> 
+Intro to Programming via Python <br> 
+Physics 1: Classical Mechanics <br> 
+Multivariable Calculus <br>  
 
 
 
