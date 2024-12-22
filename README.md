@@ -3,15 +3,15 @@
 
 ## Intro
 
-### Hello I'm a Third year Undergraduate Student studying Electrical Engineering and Computer Science. I'm interested in working across the hardware-software stack, digital system design, and all things low level.
+ Hello! I'm a third year undergraduate student studying Electrical Engineering and Computer Science. I'm interested in working across the hardware-software stack, digital system design, and all things low level.
 
-### Here's my resume, and feel free to reach me at [yhawaz AT mit DOT edu]. 
+ Here's my [resume](photos/resume.pdf), and feel free to reach me at [yhawaz AT mit DOT edu]. 
 
-### I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
+ I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
 
-#### Cool Projects (#Projects)
-#### Past Experiences (#My-Past-Experiences)
-#### My Courswork(# Relevant-Coursework)
+#### [Cool Projects] (#Projects)
+#### [Past Experiences] (#My-Past-Experiences)
+#### [My Courswork](# Relevant-Coursework)
 
 ## Projects
 ### HoloForge: a camera-controlled 3D model viewer on FPGA
@@ -22,28 +22,49 @@ In this class, assignments were completed in SystemVerilog and deployed to Xilin
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
 
 
- - date: November 2024
+ - dates: November 2024
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
- <!-- - code: [github.com/k](https://github.com/kailasbk/fpga-360) -->
+ - code: [github.com/k](https://github.com/kailasbk/fpga-360)
  <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
  <!-- - report: [pdf](fpga_360_report.pdf) -->
+
 ### SnorOS
 *Hobby Proj*
 
 I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
 
 
- - date: November 2024
- - collaborators: Mena Filfil
- - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
- <!-- - code: [github.com/k](https://github.com/kailasbk/fpga-360) -->
+ - dates: June 2024-Present
+ - code: [github.com/k](https://github.com/kailasbk/fpga-360)
  <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
  <!-- - report: [pdf](fpga_360_report.pdf) -->
 
 ## My Past Experiences
 
 ## Relevant Coursework
+### Fall 2024
+#### Digital Systems Labroatory 
+#### Linear Algebra
+#### Circuits
+### Spring 2024
+#### Constructive Computer Archtectiure
+#### Algorithims and Data Structures 
+### Fall 2023
+#### Computer Archtectiure
+#### Discrete Mathematics
+#### Intro to Music Tech
+#### Geospatial Software
+### Spring 2023
+#### Fundamentals of Programming (taught in python) 
+#### Physics 2: Electricity and Mangnetism
+### Fall 2022
+#### Intro to Programming via C and Assembly
+#### Intro to Programming via Python
+#### Physics 1: Classical Mechanics
+#### Multivariable Calculus 
+
+
 
 
 
