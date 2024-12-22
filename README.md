@@ -5,7 +5,7 @@
 
 ## Intro
 
- Hello! I'm a third year undergraduate student studying Electrical Engineering and Computer Science. I'm interested in working across the hardware-software stack, digital system design, and all things low level.
+ Hello my name's Yeabsira Hawaz and I'm currently a third year undergrad at MIT studying Electrical Engineering and Computer Science. I'm interested in working across the hardware-software stack, digital system design, and all things low level.
 
  Here's my [resume](photos/resume.pdf), and feel free to reach me at [yhawaz AT mit DOT edu]. 
 
@@ -20,7 +20,6 @@
 *Final Project for 6.205(6.111): Digital Systems Laboratory*
 
 <img src="photos/cube.png" width="300" height="300">
-<img src="photos/bass_kicad.png" width="300" height="300"> <br>
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
@@ -30,31 +29,38 @@ The class concluded with a open-ended final project, and my parter and I decided
  - dates: November 2024
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
- - code: [github.com/k](https://github.com/kailasbk/fpga-360)
- <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
- <!-- - report: [pdf](fpga_360_report.pdf) -->
+ - code: [github.com/Menamonmon/holoforge](https://github.com/Menamonmon/holoforge)
+ - report: [pdf]()
 
 ### SnorOS
 *Hobby Proj*
 
-I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
+I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C. It has working interrupts, VGA drivers, and keyboard drivers all written by me. I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works. So far it's been a really educational project, since any tutorial on writing a OS aren't great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write a actually interactable with UI soon.
 
 
  - dates: June 2024-Present
- - code: [github.com/k](https://github.com/yhawaz/snorOs)
- <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
- <!-- - report: [pdf](fpga_360_report.pdf) -->
+ - code: [github.com/yhawaz/snorOs](https://github.com/yhawaz/snorOs)
+
+## Bass Guitar Pedals
+**Hobby Proj*
+
+<img src="photos/bass_kicad.png" width="300" height="300">
+I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. The main motivation behind this project was to get some exposure to circuits before I took the class, and learn kicad. Also, bass guitar pedals are really expensive, and transistors and resistors are really cheap. 
 
 ### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
+<img src="photos/konata.png" width="400" height="300">
+<img src="photos/state_machine.png" width="400" height="300">
 
-I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
+### Autonomous Robo Car
+*Project for 16.632 Intro to Autonomous Machines*
+<img src="photos/robo.png" width="300" height="300">
 
 
- - dates: June 2024-Present
- - code: [github.com/k](https://github.com/yhawaz/snorOs)
- <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
- <!-- - report: [pdf](fpga_360_report.pdf) -->
+
+ - dates: May 2024
+ - code: [github.com/yhawaz/superscalar_proccessor](https://github.com/yhawaz/superscalar_proccessor)
+ - report: [pdf]()
 
 ## My Past Experiences
 
@@ -73,11 +79,11 @@ Intro to Music Tech <br>
 Geospatial Software 
 ### Spring 2023
 Fundamentals of Programming (taught in python) <br>  
-Physics 2: Electricity and Mangnetism 
+Physics: Electricity and Mangnetism 
 ### Fall 2022
 Intro to Programming via C and Assembly <br> 
 Intro to Programming via Python <br> 
-Physics 1: Classical Mechanics <br> 
+Physics: Classical Mechanics <br> 
 Multivariable Calculus 
 
 
