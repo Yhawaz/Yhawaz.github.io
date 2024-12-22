@@ -34,7 +34,7 @@ The reason we decided to use a MIG with AMBA AXI was that it made it easier to w
  - code: [github.com/Menamonmon/holoforge](https://github.com/Menamonmon/holoforge)
  - report: [pdf](photos/holo_report.pdf)
 
-### SnorOS
+### snorOS
 *Hobby Proj*
 
 I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C.I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works. 
