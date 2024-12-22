@@ -22,6 +22,10 @@
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with an open-ended final project, and my partner and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 RAM for our framebuffer to allow for better resolution down the line.
+
+We currently have succcesfull rendering of 3D objects like the cube shown above. We also have a working framebuffer that interacts with the offboard DDR3 Ram via a wrapper I wrote that talks to a MIG over the AMBI Axi protocol. The reason we decided to use a MIG with AMBA axi was because it made it easier to write out of order addresses to the MIG via a custom stacker we wrote, that takes the 16 bit values that come out of the graphics pipeline and stacks them to 128 bits(with varying strobe's based on if the data's in order). We have two frames in the DRAM for clearing and switching, and have working view changing with the camera. For more information just read the report. However note that a couple of the features we implemented after the class was over since we didn't have enough time to hit all of our goals. 
+
+<!-- results here -->
  - dates: November 2024
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
@@ -31,7 +35,9 @@ The class concluded with an open-ended final project, and my partner and I decid
 ### SnorOS
 *Hobby Proj*
 
-I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C. It has working interrupts, VGA drivers, and keyboard drivers all written by me. I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works. So far it's been a really educational project, since any tutorial on writing an OS aren't great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write an actually interactable UI soon.
+I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C.I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works. 
+
+So far it has working interrupts, VGA drivers, and keyboard drivers all written by me. It also has a working driver for interacting with the ports on the PIC controller.So far it's been a really educational project, since any tutorial on writing an OS aren't great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write an actually interactable UI soon.
  - dates: June 2024-Present
  - code: [github.com/yhawaz/snorOs](https://github.com/yhawaz/snorOs)
 
