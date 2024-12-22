@@ -30,7 +30,7 @@ The class concluded with a open-ended final project, and my parter and I decided
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
  - code: [github.com/Menamonmon/holoforge](https://github.com/Menamonmon/holoforge)
- - report: [pdf]()
+ - report: [pdf](photos/holo_report.pdf)
 
 ### SnorOS
 *Hobby Proj*
@@ -50,20 +50,23 @@ I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. T
 ### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
 
-
-
 <img src="photos/konata.png" width="650" height="400"> <br>
 <img src="photos/state_machine.png" width="650" height="400"> <br>
-meow
+In this class assignments were completed in BlueSpec a System-Verilog spinoff, for our final-project we were tasked with picking from one of the various optimizations we covered in class and applying it to a pipelined-proccessor we had previously written as an assignment. My group decided to implement a SuperScalar Proccessor with a branch-target buffer, and apply it to a physical FPGA. We ended up being the only functioning SuperScalar proccessor that semester. A diagram explaining our proccessor and our konata logs demonstrating it actually performs two instruction per cycle are photographed above.
+ - dates: April 2024-May 2024
+ - collaborators: Armando Moncada and Orion li
+ - contribution: designing and implementing a majority of the SuperScalar logic
+ - code: [github.com/yhawaz/superscalar_proccessor](https://github.com/yhawaz/superscalar_proccessor)
+ - report: [pdf](photos/cachereport.pdf)
+
+
+
 
 ### Autonomous Robo Car
 *Project for 16.632 Intro to Autonomous Machines*
 
 <img src="photos/robo.png" width="300" height="300"><br>
 meow
-
-
-
 
  - dates: Dececember 2023
  - code: [github.com/yhawaz/RoboCar](https://github.com/yhawaz/RoboCar)
