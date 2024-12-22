@@ -1,5 +1,5 @@
 # Yeabsira Hawaz's Portfolio
-<img src="photos/face.png" width="500">
+<img src="photos/face.png" width="500" height="600">
 
 
 
@@ -59,7 +59,7 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
 
 ## Relevant Coursework
 ### Fall 2024
-Digital Systems Labroatory<br>  
+Digital Systems Labroatory 
 Linear Algebra <br> 
 Circuits  
 ### Spring 2024 
