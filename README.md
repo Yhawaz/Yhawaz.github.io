@@ -49,17 +49,23 @@ I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. T
 
 ### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
-<img src="photos/konata.png" width="400" height="300">
+
+Meow
+
+
+<img src="photos/konata.png" width="600" height="400"> <br>
 <img src="photos/state_machine.png" width="400" height="300">
 
 ### Autonomous Robo Car
 *Project for 16.632 Intro to Autonomous Machines*
 <img src="photos/robo.png" width="300" height="300">
 
+Meow
 
 
- - dates: May 2024
- - code: [github.com/yhawaz/superscalar_proccessor](https://github.com/yhawaz/superscalar_proccessor)
+
+ - dates: Dececember 2023
+ - code: [github.com/yhawaz/RoboCar](https://github.com/yhawaz/RoboCar)
  - report: [pdf]()
 
 ## My Past Experiences
