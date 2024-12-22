@@ -2,13 +2,25 @@
 
 ## Hello I'm a Third year Undergraduate Student studying Electrical Engineering and Computer Science. I'm interested in working across the hardware-software stack, digital system design, and all things low level.
 
-## Cool Projects
-## My Courswork
-## My Classes
+### Here's my resume, and feel free to reach me at [yhawaz AT mit DOT edu]. 
 
-## I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
+### I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
 
-## Here's my resume, and feel free to reach me at [yhawaz AT mit DOT edu], also check out my github. 
+
+### Cool Projects
+### My Courswork
+### Past Experiences
+
+
+
+
+
+## My Projects
+
+## My Coursework
+
+
+
 
 
 <!-- #### h4 Heading
