@@ -10,9 +10,9 @@
  Here's my [resume](photos/resume.pdf), and feel free to reach me at [yhawaz AT mit DOT edu]. 
  
  I'm currently working on developing network on chip for a hardware accelerator targeting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in Ableton.
-#### [Cool Projects](#projects)
+#### [My Projects](#projects)
 <!-- #### [Past Experiences](#my-past-experiences) -->
-#### [My Courswork](#relevant-coursework)
+#### [My![alt text](image.png) Courswork](#relevant-coursework)
 
 ## Projects
 ### HoloForge: a camera-controlled 3D model viewer on FPGA
@@ -39,14 +39,16 @@ The reason we decided to use a MIG with AMBA AXI was that it made it easier to w
 
 I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C.I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works. 
 
-So far it has working interrupts, VGA drivers, and keyboard drivers all written by me. It also has a working driver for interacting with the ports on the PIC controller.So far it's been a really educational project, since any tutorial on writing an OS aren't great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write an actually interactable UI soon.
+So far it has working interrupts, VGA drivers, and keyboard drivers all written by me. It also has a working driver for interacting with the ports on the PIC controller. Currently working on implementing the shell. It currently could in theory run on a intel i386, but I can't really get my hands on one of those. So far it's been a really educational project, since any tutorial on writing an OS aren't great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write an actually interactable UI soon. Currently my hopes are for it to have a very bare bones, UI and eventually branch into custome file mangemant and memory allocation. I also want to run doom on it. Feel to grab the iso file from my github and run it in your emulator of choice(prefer qemu, if so the command is qemu-system-i386 -cdrom snorOs.iso).
+
  - dates: June 2024-Present
  - code: [github.com/yhawaz/snorOs](https://github.com/yhawaz/snorOs)
 
 ### Bass Guitar Pedals
 *Hobby Proj*
 
-<img src="photos/bass_kicad.png" width="300" height="300"> <br>
+<img src="photos/kicad.png" width="300" height="300"> <br>
+I breadboarded a circuit for a Fuzz pedal then designed a pcb for it in kicad. I'm using a 2 Caps in parllel with one being hooked into a potnetiometer to adjust the one(or the agressivness of the fuzz), which is caused by running
 I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. The main motivation behind this project was to get some exposure to circuits before I took the class, and learn kicad. Also, bass guitar pedals are really expensive, and transistors and resistors are really cheap. 
 
 ### CacheMeOutside: A SuperScalar Proccessor
@@ -54,6 +56,7 @@ I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. T
 
 <img src="photos/konata.png" width="800" height="300"> <br>
 <img src="photos/state_machine.png" width="800" height="300"> <br>
+
 In this class assignments were completed in BlueSpec (a SystemVerilog spinoff). For our final project, we were tasked with picking from one of the various optimizations we covered in class and applying it to a pipelined-processor we had previously written as an assignment. My group decided to implement a SuperScalar Processor with a branch-target buffer and synth it on a Xilinx FPGA. We ended up being the only functioning SuperScalar processor that semester. A diagram explaining our processor and our konata logs demonstrating it actually performs two instructions per cycle are shown above.
 
  - dates: April 2024-May 2024
