@@ -20,7 +20,7 @@
 *Final Project for 6.205(6.111): Digital Systems Laboratory*
 
 <img src="photos/cube.png" width="300" height="300">
-<img src="photos/bass_kicad.png" width="300" height="300">
+<img src="photos/bass_kicad.png" width="300" height="300"> <br>
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
@@ -44,7 +44,7 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
  - code: [github.com/k](https://github.com/yhawaz/snorOs)
  <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
  <!-- - report: [pdf](fpga_360_report.pdf) -->
-### SnorOS
+### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure ![alt text](image.png)
 
 I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
@@ -59,25 +59,25 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
 
 ## Relevant Coursework
 ### Fall 2024
-Digital Systems Labroatory <br>  
+Digital Systems Labroatory<br>  
 Linear Algebra <br> 
-Circuits <br> 
-### Spring 2024 <br> 
+Circuits  
+### Spring 2024 
 Constructive Computer Archtectiure <br> 
-Algorithims and Data Structures  <br> 
+Algorithims and Data Structures   
 ### Fall 2023
 Computer Archtectiure <br> 
 Discrete Mathematics <br> 
 Intro to Music Tech <br> 
-Geospatial Software <br> 
+Geospatial Software 
 ### Spring 2023
 Fundamentals of Programming (taught in python) <br>  
-Physics 2: Electricity and Mangnetism <br> 
+Physics 2: Electricity and Mangnetism 
 ### Fall 2022
 Intro to Programming via C and Assembly <br> 
 Intro to Programming via Python <br> 
 Physics 1: Classical Mechanics <br> 
-Multivariable Calculus <br>  
+Multivariable Calculus 
 
 
 
