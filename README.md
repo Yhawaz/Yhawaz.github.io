@@ -1,4 +1,6 @@
+# Yeabsira Hawaz's Portfolio
 <img src="photos/face.png" width="500">
+
 
 
 ## Intro
@@ -9,18 +11,22 @@
 
  I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
 
-#### [Cool Projects] (# Projects)
-#### [Past Experiences] (# My-Past-Experiences)
-#### [My Courswork](# Relevant-Coursework)
+#### [Cool Projects](#projects)
+#### [Past Experiences](#my-past-experiences)
+#### [My Courswork](#relevant-coursework)
 
 ## Projects
 ### HoloForge: a camera-controlled 3D model viewer on FPGA
 *Final Project for 6.205(6.111): Digital Systems Laboratory*
 
+<img src="photos/cube.png" width="300" height="300">
+<img src="photos/bass_kicad.png" width="300" height="300">
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
-![alt-text-1](photos/cube.png "title-1") ![alt-text-2](photos/bass_kicad.png "title-2")
+
+
+
  - dates: November 2024
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
