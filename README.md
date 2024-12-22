@@ -9,8 +9,8 @@
 
  I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
 
-#### [Cool Projects] (#Projects)
-#### [Past Experiences] (#My-Past-Experiences)
+#### [Cool Projects] (# Projects)
+#### [Past Experiences] (# My-Past-Experiences)
 #### [My Courswork](# Relevant-Coursework)
 
 ## Projects
@@ -20,8 +20,7 @@
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
-
-
+![alt-text-1](photos/cube.png "title-1") ![alt-text-2](photos/bass_kicad.png "title-2")
  - dates: November 2024
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
@@ -36,7 +35,17 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
 
 
  - dates: June 2024-Present
- - code: [github.com/k](https://github.com/kailasbk/fpga-360)
+ - code: [github.com/k](https://github.com/yhawaz/snorOs)
+ <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
+ <!-- - report: [pdf](fpga_360_report.pdf) -->
+### SnorOS
+*Final Project for 6.1920(6.175) Constructive Computer Archtectiure ![alt text](image.png)
+
+I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
+
+
+ - dates: June 2024-Present
+ - code: [github.com/k](https://github.com/yhawaz/snorOs)
  <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
  <!-- - report: [pdf](fpga_360_report.pdf) -->
 
