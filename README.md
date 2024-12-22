@@ -12,7 +12,7 @@
  I'm currently working on developing network on chip for hardware accelerators targetting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in abelton. 
 
 #### [Cool Projects](#projects)
-#### [Past Experiences](#my-past-experiences)
+<!-- #### [Past Experiences](#my-past-experiences) -->
 #### [My Courswork](#relevant-coursework)
 
 ## Projects
@@ -23,9 +23,6 @@
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with a open-ended final project, and my parter and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 ram for our framebuffer to allow for better resoultion down the line.
-
-
-
  - dates: November 2024
  - collaborators: Mena Filfil
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
@@ -36,7 +33,6 @@ The class concluded with a open-ended final project, and my parter and I decided
 *Hobby Proj*
 
 I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C. It has working interrupts, VGA drivers, and keyboard drivers all written by me. I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works. So far it's been a really educational project, since any tutorial on writing a OS aren't great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write a actually interactable with UI soon.
-
 
  - dates: June 2024-Present
  - code: [github.com/yhawaz/snorOs](https://github.com/yhawaz/snorOs)
@@ -50,9 +46,10 @@ I breadboarded circuits for a fuzz pedal, then designed a pcb for it in kicad. T
 ### CacheMeOutside: A SuperScalar Proccessor
 *Final Project for 6.1920(6.175) Constructive Computer Archtectiure* 
 
-<img src="photos/konata.png" width="650" height="400"> <br>
-<img src="photos/state_machine.png" width="650" height="400"> <br>
+<img src="photos/konata.png" width="800" height="500"> <br>
+<img src="photos/state_machine.png" width="800" height="500"> <br>
 In this class assignments were completed in BlueSpec a System-Verilog spinoff, for our final-project we were tasked with picking from one of the various optimizations we covered in class and applying it to a pipelined-proccessor we had previously written as an assignment. My group decided to implement a SuperScalar Proccessor with a branch-target buffer, and apply it to a physical FPGA. We ended up being the only functioning SuperScalar proccessor that semester. A diagram explaining our proccessor and our konata logs demonstrating it actually performs two instruction per cycle are photographed above.
+
  - dates: April 2024-May 2024
  - collaborators: Armando Moncada and Orion li
  - contribution: designing and implementing a majority of the SuperScalar logic
@@ -64,15 +61,13 @@ In this class assignments were completed in BlueSpec a System-Verilog spinoff, f
 
 ### Autonomous Robo Car
 *Project for 16.632 Intro to Autonomous Machines*
-
 <img src="photos/robo.png" width="300" height="300"><br>
-meow
+In this class, we worked on assignments involving an Arduino-based car that used IR sensors, photoresistors, and force sensors. To achieve accurate line-following, I implemented discrete-time digital PID control systems and refined the underlying math to ensure precise performance.
 
  - dates: Dececember 2023
  - code: [github.com/yhawaz/RoboCar](https://github.com/yhawaz/RoboCar)
- - report: [pdf]()
 
-## My Past Experiences
+<!-- ## My Past Experiences -->
 
 ## Relevant Coursework
 ### Fall 2024
