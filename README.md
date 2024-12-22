@@ -44,8 +44,9 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
  - code: [github.com/k](https://github.com/yhawaz/snorOs)
  <!-- - demo: [video](https://youtu.be/IygtqOMrrTU) -->
  <!-- - report: [pdf](fpga_360_report.pdf) -->
+
 ### CacheMeOutside: A SuperScalar Proccessor
-*Final Project for 6.1920(6.175) Constructive Computer Archtectiure ![alt text](image.png)
+*Final Project for 6.1920(6.175) Constructive Computer Archtectiure 
 
 I got bored and wrote a operating system thats definetely NOT based on my favorite pokemon(however snoralx is my favorite pokemon). The main motivation behind this project was to uncover the 
 
@@ -59,7 +60,7 @@ I got bored and wrote a operating system thats definetely NOT based on my favori
 
 ## Relevant Coursework
 ### Fall 2024
-Digital Systems Labroatory 
+Digital Systems Labroatory <br> 
 Linear Algebra <br> 
 Circuits  
 ### Spring 2024 
