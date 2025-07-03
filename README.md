@@ -1,29 +1,34 @@
 # Yeabsira Hawaz's Portfolio
 <img src="photos/face.png" width="400" height="300">
 
-
-
 ## Intro
 
- Hello my name's Yeabsira Hawaz and I'm currently a third year undergrad at MIT studying Electrical Engineering and Computer Science. I'm interested in working across the hardware-software stack, digital system design, and all things low level.
+ Hello my name's Yeabsira Hawaz and I'm currently a rising Senior at MIT studying Electrical Engineering and Computer Science. I interested in working across the hardware-software stack, digital systems, chip design, and all things low level.
 
  Here's my [resume](photos/resume.pdf), and feel free to reach me at [yhawaz AT mit DOT edu]. 
  
- I'm currently working on developing network on chip for a hardware accelerator targeting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or making really ugly breadboards in lab, I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and love making weird sounds in Ableton.
+
+I'm currently hardware engineering interning at ZeroRisc working on transparent trustworthy silicon.
+
+My research is centered around developing network on chip for hardware accelerator targeting sparse linear algebra under Prof. Daniel Sanchez. Outside of making hardware run fast or , I really enjoy playing music I play bass for MIT's Jazz Combos, DJ, and making synths :p.
+
 #### [My Projects](#projects)
-<!-- #### [Past Experiences](#my-past-experiences) -->
 #### [My Courswork](#relevant-coursework)
 
 ## Projects
-### HoloForge: a camera-controlled 3D model viewer on FPGA
+
+
+I feel like most people would rank these based off date, but I'm ranking them based off how much I like them.
+### HoloForge: a camera-controlled 3D model viewer on a FPGA
 *Final Project for 6.205(6.111): Digital Systems Laboratory*
+
 
 <img src="photos/cube.png" width="300" height="300"> <br>
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with an open-ended final project, and my partner and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 RAM for our framebuffer to allow for better resolution down the line.
 
-We currently have successful rendering of 3D objects like the cube shown above. The graphics pipeline starts with the pre-proc stage that takes in points from a triangle and virtual camera positions from the camera module, converts them to NDC coordinates, and performs boundary checks before passing them to the rasterizer. Simultaneously, the shader takes in the color of the given triangle and the current light source, finds the color intensity, and passes that new color into the rasterizer. The rasterizer then performs a Barycentric interpolation and checks if we've processed any points outside of the triangle and eliminates them. From there, we pass this depth, x, y, and color to our working framebuffer that interacts with the offboard DDR3 RAM via a wrapper I wrote that talks to a MIG over the AMBA AXI protocol.
+We currently have successful rendering of 3D objects like the cube shown above, and the ability to change the view of the cube based off camera inputs. The graphics pipeline starts with the pre-proc stage that takes in points from a triangle and virtual camera positions from the camera module, converts them to NDC coordinates, and performs boundary checks before passing them to the rasterizer. Simultaneously, the shader takes in the color of the given triangle and the current light source, finds the color intensity, and passes that new color into the rasterizer. The rasterizer then performs a Barycentric interpolation and checks if we've processed any points outside of the triangle and eliminates them. From there, we pass this depth, x, y, and color to our working framebuffer that interacts with the offboard DDR3 RAM via a wrapper I wrote that talks to a MIG over the AMBA AXI protocol.
 
 The reason we decided to use a MIG with AMBA AXI was that it made it easier to write out-of-order addresses to the MIG via a custom stacker we wrote. This stacker takes the 16-bit color values that come out of the graphics pipeline and stacks them into 128 bits (with varying strobes based on whether the data is in order) that get fed into the MIG. We have two frames in the DRAM for clearing and switching, and we have working view changes without the camera(which I will hopefully get working soon). For more information, just read the report. However, note we implemented a portion of features after the class was over.
 
@@ -33,6 +38,11 @@ The reason we decided to use a MIG with AMBA AXI was that it made it easier to w
  - contribution: pixel-preproccessing, framebuffer, DDR3 memory interfacing, camera control and interface
  - code: [github.com/Menamonmon/holoforge](https://github.com/Menamonmon/holoforge)
  - report: [pdf](photos/holo_report.pdf)
+
+
+<!-- ### Jazzy Dude -->
+<!---->
+<!-- -I feel sloppy -->
 
 ### snorOS
 *Hobby Proj*
@@ -69,8 +79,6 @@ In this class assignments were completed in BlueSpec (a SystemVerilog spinoff). 
  - report: [pdf](photos/cachereport.pdf)
 
 
-
-
 ### Autonomous Robo Car
 *Project for 16.632 Intro to Autonomous Machines* <br>
 <img src="photos/robo.png" width="300" height="300"><br>
@@ -82,13 +90,16 @@ In this class, we worked on assignments involving an Arduino-based car that used
 <!-- ## My Past Experiences -->
 
 ## Relevant Coursework
+### Spring 2025
+Microcomputer Laboratory <br>
+Semiconductors <br>
 ### Fall 2024
-Digital Systems Labroatory <br> 
+Digital Systems Laboratory <br> 
 Linear Algebra <br> 
 Circuits  
 ### Spring 2024 
-Constructive Computer Archtectiure <br> 
-Algorithims and Data Structures   
+Constructive Computer Architecture <br> 
+Algorithms and Data Structures   
 ### Fall 2023
 Computer Architecture <br>
 Discrete Mathematics <br> 
@@ -103,14 +114,6 @@ Intro to Programming via C and Assembly <br>
 Intro to Programming via Python <br> 
 Physics: Classical Mechanics <br> 
 Multivariable Calculus 
-
-
-
-
-
-
-
-
 
 <!-- #### h4 Heading
 ##### h5 Heading
