@@ -23,8 +23,11 @@ I feel like most people would rank these based off date, but I'm ranking them ba
 *Final Project for 6.205(6.111): Digital Systems Laboratory*
 
 
-<img src="photos/cube.png" width="300" height="300"> <br>
-[![Everything Is AWESOME](https://img.youtube.com/vi/Jawq5mxmuF8/0.jpg)](https://www.youtube.com/watch?v=Jawq5mxmuF8 "Everything Is AWESOME")
+<!-- <img src="photos/cube.png" width="300" height="300"> <br> -->
+
+<a href="https://youtu.be/Jawq5mXmuF8"  >
+  <img src="photos/cube1.png" width="300" height="300">
+</a>
 https://youtu.be/Jawq5mXmuF8
 
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
