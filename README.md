@@ -25,7 +25,7 @@ I feel like most people would rank these based off date, but I'm ranking them ba
 
 <!-- <img src="photos/cube.png" width="300" height="300"> <br> -->
 <a href="https://youtu.be/Jawq5mXmuF8"  >
-  <img src="photos/cube1.png" width="300" height="300">
+  <img src="photos/cube.png" width="300" height="300">
 </a>
 
 
