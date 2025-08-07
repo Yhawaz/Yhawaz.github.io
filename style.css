@@ -1,0 +1,111 @@
+/* ---------- palette ---------- */
+:root {
+  --lavender-0:#e9e1ff;
+  --lavender-1:#ddd2ff;
+  --accent-1: #4c1d95;          /* headings + nav */
+  --accent-2: #9060ff;          /* inline links */
+  --card-bg:  #5b46b0;          /* project cards */
+  --card-bg-h:#6b57c2;
+  --card-tx:  #f4f1ff;
+}
+
+/* ---------- reset / globals ---------- */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+body{
+  font-family:system-ui,sans-serif;
+  max-width:1000px;
+  margin:48px auto;
+  padding:0 24px;
+  line-height:1.6;
+  color:#260b51;
+  background:linear-gradient(180deg,var(--lavender-0)0%,var(--lavender-1)100%);
+}
+
+img{max-width:100%;height:auto;border-radius:8px}
+
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+h1,h2{color:var(--accent-1);margin:0 0 .8rem 0}
+h1{font-size:2.4rem}
+
+/* ---------- hero layout ---------- */
+.hero{
+  display:flex;
+  gap:48px;                   /* space between nav and main */
+}
+
+/* vertical nav */
+.nav-column{
+  flex:0 0 120px;
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+  padding-top:.2rem;
+}
+.nav-column a{color:var(--accent-1);font-weight:600}
+
+/* main column: photo floats left, text flows */
+.main-column{
+  flex:1;
+}
+.main-column img{
+  float:left;
+  margin:0 32px 16px 0;       /* text wraps nicely */
+}
+
+/* ---------- project grid ---------- */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:24px;
+  margin-top:3rem;
+  margin-bottom:3rem;
+}
+
+.project-card{
+  background:var(--card-bg);
+  border-radius:10px;
+  padding:14px;
+  text-align:center;
+  color:var(--card-tx);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  transition:transform .15s,background-color .15s;
+}
+.project-card:hover{
+  transform:translateY(-6px);
+  background:var(--card-bg-h);
+}
+.project-card img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-radius:6px;
+}
+.project-card span{
+  margin-top:.7rem;
+  font-weight:600;
+  font-size:.95rem;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:740px){
+  .hero{flex-direction:column}
+  .main-column img{float:none;margin:0 0 24px 0;width:70%}
+  .nav-column{flex-direction:row;flex-wrap:wrap;gap:1rem 1.5rem}
+  .nav-column a{font-weight:500}
+}
+
+.nav-label {
+  margin: .8rem 0 .2rem 0;
+  font-size: .9rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent-1);    /* keep the same purple */
+  font-weight: 1000;          /* darker / thicker */
+  opacity: 1;                /* fully opaque */
+}

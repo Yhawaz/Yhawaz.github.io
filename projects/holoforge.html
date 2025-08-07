@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HoloForge: Camera‑Controlled 3D Viewer on FPGA</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1>HoloForge: Camera‑Controlled 3D Viewer on FPGA</h1>
+<img src="../photos/cube.png" alt="holoforge image">
+<p>
+
+In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
+<!-- sample assingments if you wanna do that -->
+The class concluded with an open-ended final project, and my partner and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 RAM for our framebuffer to allow for better resolution down the line.</p>
+
+<p>
+We currently have successful rendering of 3D objects like the cube shown above, and the ability to change the view of the cube based off camera inputs. The graphics pipeline starts with the pre-proc stage that takes in points from a triangle and virtual camera positions from the camera module, converts them to NDC coordinates, and performs boundary checks before passing them to the rasterizer. Simultaneously, the shader takes in the color of the given triangle and the current light source, finds the color intensity, and passes that new color into the rasterizer. The rasterizer then performs a Barycentric interpolation and checks if we've processed any points outside of the triangle and eliminates them. From there, we pass this depth, x, y, and color to our working framebuffer that interacts with the offboard DDR3 RAM via a wrapper I wrote that talks to a MIG over the AMBA AXI protocol.</p>
+
+<p>
+The reason we decided to use a MIG with AMBA AXI was that it made it easier to write out-of-order addresses to the MIG via a custom stacker we wrote. This stacker takes the 16-bit color values that come out of the graphics pipeline and stacks them into 128 bits (with varying strobes based on whether the data is in order) that get fed into the MIG. We have two frames in the DRAM for clearing and switching, and we have working view changes with the camera. For more information, just read the report. However, note we implemented a portion of features after the class was over.
+            </p>
+<ul>
+  <li><a href="https://github.com/Menamonmon/holoforge">GitHub Repo</a></li>
+  <li><a href="../photos/holo_report.pdf">Project Report (PDF)</a></li>
+  <li><a href="https://youtu.be/Jawq5mXmuF8">Demo Video</a></li>
+</ul>
+<p><a href="../index.html">← Back to home</a></p>
+</body>
+    <nav class="nav-column">
+        <a href="../index.html">Home</a>
+
+        <span class="nav-label">Projects</span>   <!-- new label -->
+
+        <a href="holoforge.html">holoforge</a>
+        <a href="snoros.html">snoros</a>
+        <a href="basspedal.html">basspedal</a>
+        <a href="superscalar.html">superscalar</a>
+        <a href="robocar.html">robocar</a>
+    </nav>
+</html>
