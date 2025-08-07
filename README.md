@@ -24,6 +24,9 @@ I feel like most people would rank these based off date, but I'm ranking them ba
 
 
 <img src="photos/cube.png" width="300" height="300"> <br>
+[![Everything Is AWESOME](https://img.youtube.com/vi/Jawq5mxmuF8/0.jpg)](https://www.youtube.com/watch?v=Jawq5mxmuF8 "Everything Is AWESOME")
+https://youtu.be/Jawq5mXmuF8
+
 In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs.
 <!-- sample assingments if you wanna do that -->
 The class concluded with an open-ended final project, and my partner and I decided to create a camera-controlled 3D Model viewer that could render 3D-meshes, and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 RAM for our framebuffer to allow for better resolution down the line.
