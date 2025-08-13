@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JazzyDude: A PSOC Digital Synthesizer/title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1>JazzyDude: A PSOC Digital Synthesizer</h1>
+<img src="../photos/cube.png" alt="holoforge image">
+
+<p>Jazzy Dude was my final project for MIT’s Microcomputer Class (6.115/6.2060). In this class we used a 8051 Microcontroller, assembly and knowledge of circuits to make various common embedded systems projects from scratch including a ballast lamp striking program, lasers, and a robot arm. For our final project we were tasked with using a PSOC 5LP to make something cool. I decided to create a Jazz Based instrument synthesizer that allowed the user to either play the saxophone noise I recreated (and a piano at a much much lower sample rate), or have the synthesizer play some pre-made standards that could be transposed to any key, or bpm. </p>
+
+<p>The first part of the project is getting sound to come out ie the circuit. Here's my circuit, basically a bunch of build up into getting stuff into an audio amplifier, and then routing that to the 3.5mm jack.</p>
+
+<p>Then the next part was the reverse fourier transforms, I just used a python script that took a 2 second snippet of a saxophone note, and gave me a nice waveform of it. Then I had to use direct digital synthesis to step through the wave form.  I had to use direct digital synthesis because, originally i used the built in wave form stepper in PSOC, but I needed to do amplitude modulation to get the ADSR working, and the built in waveform stepper would automatically hook into a DAC, and it was annoying to do the amplitude modulation with the raw analog signal in PSOC creator. So I used direct digital synthesis, then made a simple ADSR(shown in the photo below). The ADSR was honestly just setting variables for the attack,decay,sustain,and release, and creating a simple state machine with case statements. I also needed some notion of time, so I have a “dt” variable to keep track of total time elapsed(since its kind of hard to keep track of ADSR without time).</p>
+
+<p> From there it was a lot of tweaking values to get a solid way to play 16th notes(a combination of sampling rate, and too high of a decay value made it take a couple days). Then writing a bunch of C code to have a note playing system, a bar playing system, and a chart playing system, so this hand made wave form player could play some prewritten tunes(described as 2D C arrays of “note structs”). Then from there a bit of tweaking and circuitry to have potentiometers control the BPM and transpose the key of these prewritten tunes. And give or take 2 or 3 all nighters and  boom we have the Jazzy Dude presented in that video. </p>
+
+
+<ul>
+  <li><a href="https://github.com/Menamonmon/holoforge">GitHub Repo</a></li>
+  <li><a href="../photos/holo_report.pdf">Project Report (PDF)</a></li>
+  <li><a href="https://youtu.be/Jawq5mXmuF8">Demo Video</a></li>
+</ul>
+<p><a href="../index.html">← Back to home</a></p>
+</body>
+    <nav class="nav-column">
+        <a href="../index.html">Home</a>
+
+        <span class="nav-label">Projects</span>   <!-- new label -->
+
+        <a href="holoforge.html">holoforge</a>
+        <a href="snoros.html">snoros</a>
+        <a href="basspedal.html">basspedal</a>
+        <a href="superscalar.html">superscalar</a>
+        <a href="robocar.html">robocar</a>
+    </nav>
+</html>
