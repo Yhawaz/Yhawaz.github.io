@@ -1,40 +1,96 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>JazzyDude: A PSOC Digital Synthesizer/title>
-<link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8" />
+  <title>JazzyDude: A PSoC Digital Synthesizer</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Match the holoforge page layout so this works even without editing style.css */
+    .page {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .page { grid-template-columns: 1fr; }
+      .nav-column { order: 2; }
+    }
+    .nav-column {
+      position: sticky; top: 1rem;
+      display: flex; flex-direction: column; gap: .5rem;
+    }
+    .nav-label { margin-top: .75rem; opacity: .7; font-size: .9rem; }
+    .content { max-width: 900px; }
+    .hero-video {
+      position: relative; display: block; border-radius: 12px; overflow: hidden;
+    }
+    .hero-video img { display: block; width: 100%; height: auto; }
+    .play-badge {
+      position: absolute; inset: 0; display: grid; place-items: center;
+      background: rgba(0,0,0,.22);
+      transition: background .2s ease-in-out;
+    }
+    .play-badge svg {
+      width: 88px; height: 88px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.4));
+      background: white; border-radius: 999px; padding: 14px;
+    }
+    .hero-video:hover .play-badge { background: rgba(0,0,0,.32); }
+    figure { margin: 1.25rem 0; }
+    figure img { width: 100%; height: auto; border-radius: 10px; }
+    figcaption { font-size: .9rem; opacity: .75; margin-top: .25rem; }
+  </style>
 </head>
 <body>
-<h1>JazzyDude: A PSOC Digital Synthesizer</h1>
-<img src="../photos/cube.png" alt="holoforge image">
-
-<p>Jazzy Dude was my final project for MIT’s Microcomputer Class (6.115/6.2060). In this class we used a 8051 Microcontroller, assembly and knowledge of circuits to make various common embedded systems projects from scratch including a ballast lamp striking program, lasers, and a robot arm. For our final project we were tasked with using a PSOC 5LP to make something cool. I decided to create a Jazz Based instrument synthesizer that allowed the user to either play the saxophone noise I recreated (and a piano at a much much lower sample rate), or have the synthesizer play some pre-made standards that could be transposed to any key, or bpm. </p>
-
-<p>The first part of the project is getting sound to come out ie the circuit. Here's my circuit, basically a bunch of build up into getting stuff into an audio amplifier, and then routing that to the 3.5mm jack.</p>
-
-<p>Then the next part was the reverse fourier transforms, I just used a python script that took a 2 second snippet of a saxophone note, and gave me a nice waveform of it. Then I had to use direct digital synthesis to step through the wave form.  I had to use direct digital synthesis because, originally i used the built in wave form stepper in PSOC, but I needed to do amplitude modulation to get the ADSR working, and the built in waveform stepper would automatically hook into a DAC, and it was annoying to do the amplitude modulation with the raw analog signal in PSOC creator. So I used direct digital synthesis, then made a simple ADSR(shown in the photo below). The ADSR was honestly just setting variables for the attack,decay,sustain,and release, and creating a simple state machine with case statements. I also needed some notion of time, so I have a “dt” variable to keep track of total time elapsed(since its kind of hard to keep track of ADSR without time).</p>
-
-<p> From there it was a lot of tweaking values to get a solid way to play 16th notes(a combination of sampling rate, and too high of a decay value made it take a couple days). Then writing a bunch of C code to have a note playing system, a bar playing system, and a chart playing system, so this hand made wave form player could play some prewritten tunes(described as 2D C arrays of “note structs”). Then from there a bit of tweaking and circuitry to have potentiometers control the BPM and transpose the key of these prewritten tunes. And give or take 2 or 3 all nighters and  boom we have the Jazzy Dude presented in that video. </p>
-
-
-<ul>
-  <li><a href="https://github.com/Menamonmon/holoforge">GitHub Repo</a></li>
-  <li><a href="../photos/holo_report.pdf">Project Report (PDF)</a></li>
-  <li><a href="https://youtu.be/Jawq5mXmuF8">Demo Video</a></li>
-</ul>
-<p><a href="../index.html">← Back to home</a></p>
-</body>
+  <div class="page">
     <nav class="nav-column">
-        <a href="../index.html">Home</a>
-
-        <span class="nav-label">Projects</span>   <!-- new label -->
-
-        <a href="holoforge.html">holoforge</a>
-        <a href="snoros.html">snoros</a>
-        <a href="basspedal.html">basspedal</a>
-        <a href="superscalar.html">superscalar</a>
-        <a href="robocar.html">robocar</a>
+      <a href="../index.html">Home</a>
+      <span class="nav-label">Projects</span>
+      <a href="holoforge.html">holoforge</a>
+      <a href="snoros.html">snoros</a>
+      <a href="jazzydude.html" aria-current="page">jazzydude</a>
+      <a href="superscalar.html">superscalar</a>
     </nav>
+
+    <main class="content">
+      <!-- Hero: clickable image that opens the YouTube demo -->
+      <a class="hero-video" href="https://youtu.be/IEKbe4mpJPY" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/IEKbe4mpJPY/maxresdefault.jpg" alt="Watch the JazzyDude demo video" />
+        <span class="play-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 5v14l11-7L8 5z" fill="black"/>
+          </svg>
+        </span>
+      </a>
+
+      <h1>JazzyDude: A PSoC Digital Synthesizer</h1>
+
+      <p>JazzyDude was my final project for MIT’s Microcomputer Class (6.115/6.2060). In this class we used an 8051 microcontroller, assembly, and circuits to build classic embedded-systems projects from scratch—ballast-lamp striker, lasers, a robot arm, etc. For the final, we switched to a Cypress PSoC&nbsp;5LP and I built a jazz-focused instrument synthesizer: you can either play a sax-like tone I reconstructed (and a piano at a much lower sample rate) or have the synthesizer play pre-made standards that can be transposed to any key and BPM.</p>
+
+      <figure>
+        <img src="../photos/kicad.png" alt="Synth output and I/O circuitry in KiCad" />
+        <figcaption>Output path into the audio amp and 3.5&nbsp;mm jack, plus control I/O.</figcaption>
+      </figure>
+
+      <p>The first part was simply getting sound out—i.e., the circuit—buffering and routing into the audio amplifier and then to the jack. Next came the waveform itself: a quick Python script captured a 2&nbsp;s sax note and produced a wavetable. I implemented Direct Digital Synthesis (DDS) to step through that table. I couldn’t use the built-in PSoC wavetable block because I needed amplitude modulation for ADSR and the built-in path wants to wire directly into a DAC, which made modulation on the analog signal awkward.</p>
+
+      <figure>
+        <img src="../photos/state_machine.png" alt="ADSR state machine diagram" />
+        <figcaption>Simple ADSR: attack → decay → sustain → release with a timebase (<code>dt</code>) and per-phase parameters.</figcaption>
+      </figure>
+
+      <p>After that it was lots of parameter tuning to make 16th notes clean (sample rate and an overly long decay cost a couple of days). I wrote C helpers to schedule notes, bars, and full charts so the wavetable player could perform prewritten tunes (encoded as 2D arrays of note structs). Finally, some hardware polish: potentiometers to set BPM and transpose the key.</p>
+
+      <ul>
+        <li><a href="https://youtu.be/IEKbe4mpJPY" target="_blank" rel="noopener">Demo Video</a></li>
+        <!-- Optional future links:
+        <li><a href="https://github.com/youruser/jazzydude" target="_blank" rel="noopener">GitHub Repo</a></li>
+        <li><a href="../photos/jazzy_report.pdf" target="_blank" rel="noopener">Project Report (PDF)</a></li>
+        -->
+      </ul>
+
+      <p><a href="../index.html">← Back to home</a></p>
+    </main>
+  </div>
+</body>
 </html>
