@@ -75,7 +75,7 @@
       <p>The first part was simply getting sound out—i.e., the circuit—buffering and routing into the audio amplifier and then to the jack. Next came the waveform itself: a quick Python script captured a 2&nbsp;s sax note and produced a wavetable. I implemented Direct Digital Synthesis (DDS) to step through that table. I couldn’t use the built-in PSoC wavetable block because I needed amplitude modulation for ADSR and the built-in path wants to wire directly into a DAC, which made modulation on the analog signal awkward.</p>
 
       <figure>
-        <img src="../photos/state_machine.png" alt="ADSR state machine diagram" />
+        <img src="../photos/adsr.png" alt="ADSR state machine diagram" />
         <figcaption>Simple ADSR: attack → decay → sustain → release with a timebase (<code>dt</code>) and per-phase parameters.</figcaption>
       </figure>
 
