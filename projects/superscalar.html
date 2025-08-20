@@ -10,8 +10,18 @@
   <a href="../index.html">Home</a> | <a href="holoforge.html">holoforge</a> | <a href="snoros.html">snoros</a> |  <a href="jazzydude.html">jazzydude</a>
 </nav>
 <h1>CacheMeOutside: Superscalar Processor</h1>
-<img src="../photos/konata.png" alt="superscalar image">
-<p>Two‑wide superscalar RISC‑V core in Bluespec with branch‑target buffer, synthesized on FPGA.</p>
+
+<p>Cache Me Outside was my final project for MIT’s Constructive Computer Architecture class (6.192). In this class we used BlueSpec(Verilog HDL Derivative), to recreate pipelined processors and implemented multi threading. For our final project me and my teammates decided to build a SuperScalar Processor with a Branch Target Buffer. I focused on building the superscalar core and handling the  epoch logic for speculation and flush recovery. Starting from a simple pipelined processor provided in the lab, we extended every stage to issue and retire two instructions per cycle.</p>
+      <figure>
+        <img src="../photos/state_machine.png" alt="recon">
+        <figcaption>The Diagram of Our Processor</figcaption>
+      </figure>
+<p>To make that work, I built “super-FIFO” queues between stages, doubled the decode logic with dependency checks to stall the second decoder when hazards appeared, and modified execution units to share resources without conflicts. The writeback stage had to be carefully ordered to prevent data corruption across dual retirements.</p>
+      <figure>
+        <img src="../photos/konata.png" alt="recon">
+        <figcaption>Logs from a cycle-accurate execution trace tracker that records instruction flow, pipeline stages, and retirements. Which clearly indicate this is a super superscalar_proccessor!</figcaption>
+      </figure>
+<p>The hardest bugs came from subtle PC mismatches in the second decode and from rewriting Konata tracing FIFOs to support two instructions retiring per cycle. Once those issues were resolved, we integrated the core with a teammate’s branch target buffer (BTB) and ran benchmarks. On compute-intensive workloads, the superscalar version delivered a consistent 10–20% speedup over the baseline single-issue pipeline.</p>
 <ul>
   <li><a href="https://github.com/yhawaz/superscalar_proccessor">GitHub Repo</a></li>
   <li><a href="../photos/cachereport.pdf">Project Report (PDF)</a></li>
