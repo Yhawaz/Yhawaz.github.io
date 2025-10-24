@@ -91,6 +91,19 @@ h1{font-size:2.4rem}
   font-weight:600;
   font-size:.95rem;
 }
+.hero img {
+  width: 200px;   /* make larger */
+  height: 200px;  /* keep square */
+  border-radius: 0;  /* sharp edges */
+  object-fit: cover;
+}
+@media (max-width: 520px) {
+  .hero img {
+    width: 140px;  /* smaller but still visible on phones */
+    height: 140px;
+  }
+}
+
 
 /* ---------- responsive ---------- */
 @media(max-width:740px){

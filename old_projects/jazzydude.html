@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JazzyDude: A PSoC Digital Synthesizer</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    .page { display: grid; grid-template-columns: 240px 1fr; gap: 2rem; align-items: start; }
+    @media (max-width: 900px){ .page{ grid-template-columns:1fr } .nav-column{ order:2 } }
+    .nav-column{ position:sticky; top:1rem; display:flex; flex-direction:column; gap:.5rem }
+    .nav-label{ margin-top:.75rem; opacity:.7; font-size:.9rem }
+    .content{ max-width: 900px }
+
+    .video-embed{ position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; margin:1rem 0 1.25rem }
+    .video-embed iframe{ position:absolute; inset:0; width:100%; height:100%; border:0 }
+    figure{ margin:1.1rem 0 }
+    figure img{ width:100%; height:auto; border-radius:10px }
+    figcaption{ font-size:.9rem; opacity:.75; margin-top:.3rem }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav-column">
+      <a href="../index.html">Home</a>
+      <span class="nav-label">Projects</span>
+      <a href="holoforge.html">holoforge</a>
+      <a href="snoros.html">snoros</a>
+      <a href="jazzydude.html" aria-current="page">jazzydude</a>
+      <a href="superscalar.html">superscalar</a>
+    </nav>
+
+    <main class="content">
+      <h1>JazzyDude: A PSoC Digital Synthesizer</h1>
+
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/IEKbe4mpJPY"
+          title="Jazzy Dude demo video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <p>Jazzy Dude was my final project for MIT’s Microcomputer Class (6.115/6.2060). In this class did embedded-systems labs from scratch with a 8051 microcontroller, a lot of hand-written assembly, and circuits that forced us to really understand what was happening at the hardware level. For my final project I decided to build a jazzy instrument synthesizer on the Cypress PSoC 5LP. The end goal was that it could either be played live, producing a saxophone-like timbre (with a low-sample-rate piano as a backup voice), or could auto-play jazz standards that you could transpose into any key and adjust to any tempo.</p>
+
+
+      <p>The first battle was just getting audio out of the thing. I had to design and wire the whole output path: filtering and buffering the signal, feeding it into an audio amplifier(a LM386 to be specific), and then routing that out through a 3.5 mm jack.</p>
+      <figure>
+        <img src="../photos/circuit_jazy.png" alt="Synth circuit schematic">
+        <figcaption>Audio output and I/O circuit designed in KiCad.</figcaption>
+      </figure>
+
+      <p>Once the audio circuit was working, I moved on to the actual synthesis stage. I started by ripping a clean two-second sax note online, then started scripting some nice python code that used numpy to abstract away fft’s for me. First I isolated one period of the waveform so it could loop seamlessly. I normalized it to ±1 and quantized it to 8-bit values (0–255) for the PSoC’s tables. To get the timbre right without wasting memory, I ran a Fourier transform, kept only the lowest few harmonics, and then did an inverse FFT to rebuild a wavetable. I also swept the number of harmonics (1, 2, 5, 10, 20, 30, 40) so I had a variety to pick from(and so I had graphs for my lab notebook). But just iterating through the samples in hardware,  sounded artificial and lifeless, which meant I had to do what every synthesizer blog raves about ADSR. The one issue is at the time I was using the PSOC’s built in wavedac where you could just drop in a csv, and it loops over values and spits out analog values. Which meant there was no good middle man for amplitude modulation.</p>
+      <figure>
+        <img src="../photos/waveform.png" alt="Oscilloscope waveform">
+        <figcaption>Oscilloscope trace of the captured saxophone waveform.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="../photos/sax_recon.png" alt="recon">
+        <figcaption>Graphs of the original waveform and the reconstructed</figcaption>
+      </figure>
+<p>That’s where Direct Digital Synthesis (DDS) came in. The DDS was honestly pretty simple, just a phase accumulator stepping through the wavetable, and it gave me the hook I needed to multiply the amplitude by a time-varying envelope. I built the ADSR as a small state machine in C: case statements stepping through attack, decay, sustain, and release, with a dt variable keeping track of elapsed time. Getting the timing right was more annoying than I expected; if the decay was slightly too long, short notes (like 16th notes) sounded muddy. I spent several days just tuning those parameters so that fast runs sounded crisp, and missing bit widths and sampling rates till it sounded the way I wanted.</p>
+      <figure>
+        <img src="../photos/adsr.png" alt="ADSR envelope screenshot">
+        <figcaption>ADSR envelope shaping viewed on the scope.</figcaption>
+      </figure>
+
+      <p>Once the core tone generation was working, I added quality-of-life features. I wrote helper routines in C that could schedule notes, bars, and even whole charts, so the synthesizer could “perform” pieces on its own. The songs were stored as 2D arrays of note structs (pitch, duration, velocity), which made it easy to transpose them to any key or speed. I also wired in potentiometers so you could set the BPM and shift the key on the fly, which made demos a lot more fun—you could slow down or speed up a tune in real time without reflashing the board. And you could switch between 8 tunes just by turning a potentiometer. Then yippee i finished my final project and could finally sleep.</p>
+      <figure>
+        <img src="../photos/jazzydude.png" alt="Synthesizer hardware closeup">
+        <figcaption>Me with my project, i think u can seee the sleep deprivation in my eyes</figcaption>
+      </figure>
+
+
+      <ul>
+        <li><a href="https://youtu.be/IEKbe4mpJPY" target="_blank" rel="noopener">Demo Video (open in YouTube)</a></li>
+      </ul>
+
+      <p><a href="../index.html">← Back to home</a></p>
+    </main>
+  </div>
+</body>
+</html>
+

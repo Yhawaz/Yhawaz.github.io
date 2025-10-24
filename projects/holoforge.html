@@ -1,107 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>HoloForge: Camera-Controlled 3D Viewer on FPGA</title>
-  <link rel="stylesheet" href="../style.css" />
-  <style>
-    /* Minimal inline styles so this just works without touching style.css */
-    .page {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 2rem;
-      align-items: start;
+<html>
+    <head>
+        <title>yhawaz</title>
+    <style>
+    li {
+        padding-top: 7px;
     }
-    @media (max-width: 900px) {
-      .page { grid-template-columns: 1fr; }
-      .nav-column { order: 2; }
+    #bodydiv {
+      padding: 20px;
+      max-width: 1000px;
+      /*max-width: 50em;*/
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
     }
-    .nav-column {
-      position: sticky; top: 1rem;
-      display: flex; flex-direction: column; gap: .5rem;
+    pre {
+      background-color: #eee;
+      padding:10px;
+      border-radius: 5px;
+      overflow-x: auto;
     }
-    .nav-label { margin-top: .75rem; opacity: .7; font-size: .9rem; }
-    .content { max-width: 900px; }
-    .hero-video {
-      position: relative; display: block; border-radius: 12px; overflow: hidden;
+    h2 {
+      margin-top: 2em;
     }
-    .hero-video img { display: block; width: 100%; height: auto; }
-    .play-badge {
-      position: absolute; inset: 0; display: grid; place-items: center;
-      background: rgba(0,0,0,.22);
-      transition: background .2s ease-in-out;
-    }
-    .play-badge svg {
-      width: 88px; height: 88px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.4));
-      background: white; border-radius: 999px; padding: 14px;
-    }
-    .hero-video:hover .play-badge { background: rgba(0,0,0,.32); }
-    figure { margin: 1.25rem 0; }
-    figure img { width: 100%; height: auto; border-radius: 10px; }
-    figcaption { font-size: .9rem; opacity: .75; margin-top: .25rem; }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <nav class="nav-column">
-      <a href="../index.html">Home</a>
-      <span class="nav-label">Projects</span>
-      <a href="holoforge.html" aria-current="page">holoforge</a>
-      <a href="jazzydude.html">jazzydude</a>
-      <a href="snoros.html">snoros</a>
-      <a href="superscalar.html">superscalar</a>
-    </nav>
 
-    <main class="content">
-      <!-- Hero: clickable image that opens the YouTube demo -->
-      <a class="hero-video" href="https://youtu.be/Jawq5mXmuF8" target="_blank" rel="noopener">
-        <!-- YouTube thumbnail pulled from the video ID -->
-        <img src="https://img.youtube.com/vi/Jawq5mXmuF8/maxresdefault.jpg" alt="Watch the HoloForge demo video" />
-        <span class="play-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M8 5v14l11-7L8 5z" fill="black"/>
-          </svg>
-        </span>
-      </a>
+    </style>
+    </head>
+    <body>
+        <div id="bodydiv">
+            <h1>holoforge</h1>
+            <h3>Hand Controlled 3D Model Viewer on FPGA, it was sorta inspired by iron man</h3>
+            <h4><a href="https://youtu.be/Jawq5mXmuF8">https://youtu.be/Jawq5mXmuF8"</a></h4>
 
-      <h1>HoloForge: Camera-Controlled 3D Viewer on FPGA</h1>
-
-      <p>This was our final project for MIT’s Digital Systems Class (6.111/6.2050). In this class, assignments were completed in SystemVerilog and deployed to Xilinx FPGAs. The class concluded with an open-ended final project, and my partner and I decided to create a camera-controlled 3D model viewer that could render 3D meshes and change the view of the scene based on real-time camera inputs. We also decided to utilize the offboard DDR3 RAM for our framebuffer to allow for better resolution down the line.</p>
-
-      <!-- Inline photo between sections -->
-      <figure>
-        <img src="../photos/cube.png" alt="Wireframe cube rendered by HoloForge" />
-        <figcaption>Early rendering of a cube using the fixed-function pipeline.</figcaption>
-      </figure>
-
+      <img  src="https://img.youtube.com/vi/Jawq5mXmuF8/maxresdefault.jpg"  align ="left" height= "250px" alt="check out the video cause words are fake" />
+        <img src="../photos/holoforge_state.png" align= "middle" alt="Crosshair view indicating blue-pixel center of mass" height="250px" />
+      <p>This was our final project for MIT’s Digital Systems Class (6.111/6.2050). In this class, all the work was done in SystemVerilog and o Xilinx Spartan 7 FPGAs. The class concluded with an open-ended final project, and we decided to create a camera-controlled 3D model viewer that could render 3D meshes and change the view of the scene based on real-time camera inputs. We also decided(were forced) to utilize the offboard DDR3 RAM for our framebuffer to allow for better resolution down the line, also because we were already fully utilizing the BRAM for loading models.</p>
+        <img src="../photos/cube.png" align="left" alt="Wireframe cube rendered by HoloForge" height="200px" />
+        <img src="../photos/crosshair.png" align= "middle" alt="Crosshair view indicating blue-pixel center of mass" height="200px" />
       <p>We currently have successful rendering of 3D objects (like the cube shown) and the ability to change the view of the object based on the center of mass of all the blue pixels on the screen observed via an Adafruit camera hooked into the FPGA. We also have a “crosshair screen” that lets the user know what the center of mass of blue is (i.e., where their “virtual” cursor is). See the video above for a better explanation.</p>
-
-      <!-- Another inline photo (replace filename if needed) -->
-      <figure>
-        <img src="../photos/crosshair.png" alt="Crosshair view indicating blue-pixel center of mass" />
-        <figcaption>Crosshair overlay shows the camera-tracked centroid driving view changes.</figcaption>
-      </figure>
-
-      <p>The graphics pipeline starts with the pre-proc stage that takes in points from a triangle and virtual camera positions from the camera module, converts them to NDC coordinates, and performs boundary checks before passing them to the rasterizer. Simultaneously, the shader takes in the color of the given triangle and the current light source, finds the color intensity, and passes that new color into the rasterizer. The rasterizer then performs a barycentric interpolation and checks if we've processed any points outside of the triangle and eliminates them. From there, we pass this depth, x, y, and color to our working framebuffer that interacts with the offboard DDR3 RAM via a wrapper that talks to a MIG via the AXI protocol.</p>
-
-      <!-- Optional pipeline diagram (replace filename if you have it) -->
-      <figure>
-        <img src="../photos/pipeline.png" alt="Block diagram of the HoloForge graphics pipeline" />
-        <figcaption>Block diagram: pre-proc → shader → rasterizer → AXI-backed framebuffer.</figcaption>
-      </figure>
 
       <p>The reason we decided to use a MIG with AMBA AXI was that it made it easier to write out-of-order addresses to the MIG via a custom stacker we wrote. This stacker takes the 16-bit color values that come out of the graphics pipeline and stacks them into 128 bits (with varying strobes based on whether the data is in order) that get fed into the MIG. We have two frames in the DRAM for clearing and switching, and we have working view changes with the camera. For more information, read the report—note we implemented a portion of features after the class was over.</p>
 
-      <ul>
-        <li><a href="https://github.com/Menamonmon/holoforge" target="_blank" rel="noopener">GitHub Repo</a></li>
-        <li><a href="../photos/holo_report.pdf" target="_blank" rel="noopener">Project Report (PDF)</a></li>
-        <li><a href="https://youtu.be/Jawq5mXmuF8" target="_blank" rel="noopener">Demo Video</a></li>
-      </ul>
 
-      <p><a href="../index.html">← Back to home</a></p>
-    </main>
-  </div>
-</body>
+        </div>
+    </body>
+
+
+
+
 </html>
-
-

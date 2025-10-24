@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>snorOS: 32‑bit x86 Monolithic Kernel</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1>snorOS: 32‑bit x86 Monolithic Kernel</h1>
+<p>
+I wrote a kernel for a 32-bit x86 monolothic single-tasking operating system in C.I used GRUB 2 as the bootloader, and used bootstrap assembly when I needed to. The main motivation behind doing this was to flex my C skills, but also to learn how operating systems and the interconnect between machine code and software works.
+
+So far it has working interrupts, VGA drivers, and keyboard drivers all written by me. It also has a working driver for interacting with the ports on the PIC controller. Currently working on implementing the shell. It currently could in theory run on a Intel i386, but I can’t really get my hands on one of those.
+
+So far it’s been a really educational project, since any tutorial on writing an OS aren’t great so the main way to learn is by reading the Intel docs, and learning a lot of theory yourself. I hope to write an actually interactable UI soon. Currently my hopes are for it to have a very bare bones, UI and eventually branch into custome file mangemant and memory allocation. I also want to run doom on it. Feel to grab the iso file from my github and run it in your emulator of choice(I personally prefer qemu, if you also use qemu just run qemu-system-i386 -cdrom snorOs.iso).
+</p>
+
+<ul>
+  <li><a href="https://github.com/yhawaz/snorOs">GitHub Repo</a></li>
+</ul>
+</body>
+
+    <nav class="nav-column">
+        <a href="../index.html">Home</a>
+
+        <span class="nav-label">Projects</span>   <!-- new label -->
+
+        <a href="holoforge.html">holoforge</a>
+        <a href="snoros.html">snoros</a>
+        <a href="superscalar.html">superscalar</a>
+        <a href="jazzydude.html">jazzydude</a>
+    </nav>
+</html>

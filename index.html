@@ -1,82 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Yeabsira Hawaz | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<html>
+    <head>
+        <title>yhawaz</title>
+    <style>
+    li {
+        padding-top: 7px;
+    }
+    #bodydiv {
+      padding: 20px;
+      max-width: 1000px;
+      /*max-width: 50em;*/
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+    }
+    pre {
+      background-color: #eee;
+      padding:10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    h2 {
+      margin-top: 2em;
+    }
+    </style>
+    </head>
+    <body>
+        <div id="bodydiv">
+            <img align="right" src="photos/jazzydude.png" height="250px" />
+            <h1>yeabsira hawaz</h1>
+            Senior in EECS at MIT. Kind of like a cat.<br>
+           tag is usually yhawaz, KD3ANM
+            <h2>starters</h2>
+            <p>
+                I’m a Senior at MIT studying EECS. I currently really enjoy working in the Computer Architecture and FPGA space. I've been getting into hardware centered performance engineering in Cuda, and FPGA's for use in the Radio space I think a lot of this work is really interesting. 
+                </p>
+            <p>
+                You can contact me at <a href="mailto:yhawaz@mit.edu"><tt>yhawaz@mit.edu</tt></a> , my resume’s<a href=photos/resume.pdf> here</a> here if you want something this website doesn't convey well. </p>
 
-  <!-- ── HERO SECTION ─────────────────────────────────── -->
-  <section class="hero">
-    <!-- left-side nav -->
-    <nav class="nav-column">
-        <a href="index.html">Home</a>
+            <h2>research/experience</h2>
+            <p>I’ve spent the last ~2.5 years of my life doing research with <a href="https://people.csail.mit.edu/sanchez/">Prof. Daniel Sanchez</a>  on lightweight Network on Chips for hardware accelerators targeting sparse matrices/irregular workloads.</p>
 
-        <span class="nav-label">Projects</span>   <!-- new label -->
+            <p>I also spent last summer interning at <a href="https://www.zerorisc.com/"> zeroRisc</a> , a startup working on developing and helping users integrate Opentitan, the first open-source silicon root of trust. I did a lot of the work/development on starting to introduce an AXI IP for opentitan. You can read the <a href="https://www.zerorisc.com/blog/bridging-hardware-and-software-summer-intern-project"> blog</a> I wrote while I was there to learn more.</p>
 
-        <a href="projects/holoforge.html">holoforge</a>
-        <a href="projects/snoros.html">snoros</a>
-        <a href="projects/jazzydude.html">jazzydude</a>
-        <a href="projects/superscalar.html">superscalar</a>
-    </nav>
+            <h2>projects</h2>
+                <ul>
+                <li>
+                    <strong>JazzyDude: A PSOC-Based digital synth</strong>
+                        <p> For my MicroComputer class final project I made a saxophone synth/digital instrument, implemented ADSR, and made it so it could playback jazz standards, all on a PSOC 5LP. Click to learn more :p</p>
 
-    <!-- main column: photo + bio -->
-    <div class="main-column">
-      <h1>Yeabsira Hawaz</h1>
+                </li>
 
-      <img src="photos/face.png" width="300" alt="Yeabsira Hawaz">
-        <p>
-        Hi, I'm Yeabsira. I’m currently a rising senior at MIT studying Electrical
-        Engineering &amp; Computer Science. I love working across the hardware stack, FPGA's, chip design, and everything low-level.
-        </p>
+                <li>
+                    <a href="projects/holoforge.html"><b>Holoforge: A FPGA 3D Model Viewer</b></a>
+                        <p>  For my undergrad digital systems class me and my proj partner made a FPGA 3D model viewer that took in camera inputs and rotated/changed the rendering of a 3D model based on them. I had to do some weird AXI Dram stuff, a cool learning experience. Click to learn more :p</p>
 
-        <p>
-        Here’s my <a href="photos/resume.pdf" target="_blank" rel="noopener">resume</a>, and feel free
-        to reach me at <a href="mailto:yhawaz@mit.edu">yhawaz AT mit DOT edu</a>.
-        </p>
+                </li>
 
-        <p>
-        This past summer I was a hardware-engineering intern at
-        <a href="https://www.zerorisc.com/" target="_blank" rel="noopener"><strong>ZeroRisc</strong></a>,
-        working on communication bus protocols for the first open source root of trust silicon chip.
-        </p>
+                <li>
+                    <b>Cache Me Outside: A SuperScalar Processor</b>
+                        <p> For my advanced architecture class, me and 2 dudes made a SuperScalar processor in BlueSpec, that was about it. It was cool click to learn more.</p>
+                </li>
 
-        <p>
-        I do computer-architecture research in MIT’s Computation Structures Group under
-        <a href="https://people.csail.mit.edu/sanchez/" target="_blank" rel="noopener">
-            Prof. Daniel Sanchez
-        </a>, where I’ve spent the last 2 years focusing on lightweight 2D Mesh Network on Chips for
-        sparse-linear-algebra accelerators.
-        </p>
+                </ul>
+            <h2>education/teaching</h2>
+                <p> I’m a Senior in EECS at MIT. I will (95% sure) be returning next year to get my M.ENG in EECS with a concentration in Computer Architecture. You can see the classes I took in order of how cool I think they were here.</p>
+                <p> I’ve also taught a good bit in my time at MIT, I’ve been a Lab Assistant hosting office hours, and helping students debug their work in : </p>
+                <ul>
+                <li>
+                    6.205: My school’s FPGA/Digital Systems lab Course
+                </li>
+                <li>
+                    6.1910: My school’s Computer Architecture Course
+                </li>
+                <li>
+                    6.1010: my school’s Python Course
+                </li>
+            </ul>
+            <p>I really enjoy teaching, I hate it when people have weird bugs, but I love getting to basically rant to someone about hardware, and getting PAYED for it.</p>
+            <h2>personal</h2>
+            <p>outside of all this nerd stuff I also enjoy a few things outside of what happens in my computer or whatever board im probbing</p>
+            <ul>
+                <li>
+                    I really enjoy playing Jazz/funk bass, I’m part of a Jazz Combo and it's awesome. I also just love listening to Jazz, as a hardware engineer I feel like most experience and emotions can be summarized by 3 bill evans songs. I deeply enjoy Bill Evans. 
+                </li>
+                <li>
+                MMA/Kickboxing, I love fighting its so much fun and such a pure form of self expression
+                </li>
+                <li>
+                
+                ricing my macos, I don’t do much but I do spend a lot of fun time tinkering with my hw/sw setup as opposed to raw dogging vs code. Definitely not a purist as I use lazyvim, but I’m trying to fix that.
+                 </li>
+                <li>
+                reading manga, I deeply enjoy Blue Period and Red Blue, their some of my favorite pieces of media by far
+                 </li>
+                 </li>
+                <li>
+                dJing/electronic dance music, I really enjoy mixing  EDM/UKG/jersey club songs, i have mixes, maybe they’re linked here, maybe they’re not
+                 </li>
+            </ul> 
+            <h2>cats</h2>
+            <p>I do not currently own any cats, this section is for when I eventually adopt one. I would like the record to show that I love cats.</p>
 
-    </div>
-  </section>
+                
 
-  <!-- ── PROJECTS ──────────────────────────────────────── -->
-  <h2>Projects</h2>
-  <div class="project-grid">
-    <a class="project-card" href="projects/jazzydude.html">
-      <img src="photos/jazzy_cover.png" alt="JazzyDude thumbnail">
-      <span>JazzyDude: A PSOC Based Digital Synthesizer</span>
-    </a>
+        </div>
+    </body>
 
-    <a class="project-card" href="projects/holoforge.html">
-      <img src="photos/cube.png" alt="HoloForge thumbnail">
-      <span>HoloForge: A Camera-Controlled FPGA 3D Model Viewer </span>
-    </a>
-
-    <a class="project-card" href="projects/superscalar.html">
-      <img src="photos/state_machine.png" alt="Superscalar thumbnail">
-      <span>CacheMeOutside: Superscalar Processor</span>
-    </a>
-
-    <a class="project-card" href="projects/snoros.html">
-      <img src="photos/hello.png" alt="snorOS thumbnail">
-      <span>snorOS: 32-bit x86 Monolithic Kernel</span>
-    </a>
-
-  </div>
-
-</body>
 </html>
